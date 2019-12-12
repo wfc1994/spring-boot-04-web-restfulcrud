@@ -2,10 +2,14 @@ package com.wfc.springboot.config;
 
 import com.wfc.springboot.component.LoginHandlerInterceptor;
 import com.wfc.springboot.component.MyLocaleResolver;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.filter.HiddenHttpMethodFilter;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.*;
+
+import java.util.Arrays;
 
 //使用WebMvcConfigurerAdapter可以来扩展SpringMVC的功能，2.0使用的方式是实现WebMvcConfigurer接口
 //@EnableWebMvc   不要接管SpringMVC
